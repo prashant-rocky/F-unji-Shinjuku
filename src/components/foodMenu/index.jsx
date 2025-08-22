@@ -1,0 +1,56 @@
+import React from "react";  
+import { MenuData1, MenuData2 } from "../../utils/data";
+import MenuCard from "../menuCard";
+import layer from '../../assets/images/layer-1.png'
+
+const FoodMenu = () => {
+    return(
+        <section className="menu py-5">
+            <div className="container text-center">
+                 <div className="layerImg">
+                                <img src={layer} alt="error" height={40} width={200}/>
+                            </div>
+                <h3 className="py-4">Discover the Flavors of FUUNJI</h3>
+                <div className="row">
+                    <div className="col-md-6 text-start">
+                        <div className="rwo">
+                            {
+                                MenuData1.map(item =>{
+                                    return (
+                                        <div className="col-md-12 py-2" key={item.id}>
+                                            <MenuCard 
+                                                image={item.imgSrc} 
+                                                title={item.title} 
+                                                description={item.description} 
+                                                price={item.price} 
+                                            />
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                            <div className="rwo">
+                            {
+                                MenuData2.map(item =>{
+                                    return (
+                                        <div className="col-md-12 py-2" key={item.id}>
+                                            <MenuCard 
+                                                image={item.imgSrc} 
+                                                title={item.title} 
+                                                description={item.description} 
+                                                price={item.price} 
+                                            />
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+export default FoodMenu;

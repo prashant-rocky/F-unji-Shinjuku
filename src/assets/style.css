@@ -38,7 +38,7 @@ h3{
     font-weight: bolder;
 }
 .myBtn{
-    background-color: #143d59;
+    background-color: #143d59 !important;
     color: white;
     border: none;
     padding: 10px 20px;
